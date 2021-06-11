@@ -95,6 +95,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   font-family: "Raleway", sans-serif;
+  margin: 0 0 30% 0;
 }
 h1,
 p,
@@ -150,6 +151,9 @@ nav a {
 }
 nav span {
   border-left: 3px solid #626262;
+}
+.home {
+  font-weight: 600;
 }
 /*Title Section Styles*/
 .title-container {
@@ -208,9 +212,18 @@ button:hover {
 /* MOBILE --------------------------------------- */
 
 @media (max-width: 500px) {
+  /* header with nav bar */
+  .home {
+    font-weight: 600;
+  }
+  nav {
+    width: 80%;
+  }
+
   /* pic, h1 and button at top of page */
   .title-container div {
-    background-size: cover;
+    background-size: 350%;
+    background-repeat: no-repeat;
     width: 100%;
   }
   h1 {
@@ -223,26 +236,29 @@ button:hover {
     margin-top: 1%;
     border-radius: 5px;
     border: 2px solid #b9b9b9;
-    box-shadow: 2px 2px 1px #b9b9b9;
+    box-shadow: 0px 2px 7px #000000;
     transition: 1s;
+  }
+  hr {
+    display: none;
   }
   /* artist sections below top photo */
   .artists-container {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-    margin: 0 auto;
-
     flex-flow: column wrap;
-    width: 80%;
+    width: 100%;
+    border-top: 2px solid rgb(172, 172, 172);
   }
 
   .artist {
     width: 100%;
     text-align: center;
+    padding-top: 5%;
   }
   .artist img {
-    width: 80%;
+    width: 60%;
     height: 50%;
+  }
+  .bio {
+    margin: 0 10%;
   }
 }
